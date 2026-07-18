@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jack Petrotto — Vocalist | Buffalo, NY</title>
+<meta name="description" content="Jack Petrotto, Buffalo-born vocalist, brings the Great American Songbook to life. Book Jack for weddings, private parties, restaurants, and events in Western New York.">
+<meta property="og:title" content="Jack Petrotto — Vocalist">
+<meta property="og:description" content="Buffalo's own voice of the Great American Songbook.">
+<meta property="og:image" content="https://img1.wsimg.com/isteam/ip/d12e2440-1116-4ddd-8784-802bfa9e10c7/blob-0009.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0806;
+    --bg-soft:#141009;
+    --bg-card:#1a140c;
+    --gold:#c9a227;
+    --gold-soft:#e6c96b;
+    --cream:#f3ecdd;
+    --muted:#b8ab92;
+    --line:rgba(201,162,39,.28);
+    --serif:'Cormorant Garamond',Georgia,serif;
+    --sans:'Montserrat',Helvetica,Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--cream);font-family:var(--sans);font-weight:300;line-height:1.7}
+  img{max-width:100%;display:block}
+  a{color:var(--gold-soft);text-decoration:none}
+
+  /* ---------- Navigation ---------- */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(11,8,6,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.9rem 1.5rem}
+  .brand{font-family:var(--serif);font-size:1.45rem;font-weight:600;letter-spacing:.06em;color:var(--cream)}
+  .brand span{color:var(--gold)}
+  .nav-links{display:flex;gap:1.6rem;list-style:none}
+  .nav-links a{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);transition:color .25s}
+  .nav-links a:hover{color:var(--gold-soft)}
+  .nav-toggle{display:none;background:none;border:1px solid var(--line);color:var(--gold-soft);font-size:1.1rem;padding:.25rem .6rem;border-radius:4px;cursor:pointer}
+  @media(max-width:760px){
+    .nav-toggle{display:block}
+    .nav-links{position:absolute;top:100%;left:0;right:0;background:rgba(11,8,6,.97);flex-direction:column;gap:0;padding:.5rem 0;display:none;border-bottom:1px solid var(--line)}
+    .nav-links.open{display:flex}
+    .nav-links li{text-align:center;padding:.7rem 0}
+  }
+
+  /* ---------- Hero ---------- */
+  header.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding:6rem 1.5rem 4rem}
+  .hero-bg{position:absolute;inset:0;background:
+    radial-gradient(ellipse at 50% 30%,rgba(201,162,39,.14),transparent 55%),
+    radial-gradient(ellipse at 15% 85%,rgba(120,80,20,.12),transparent 50%),
+    var(--bg)}
+  .hero-content{position:relative;max-width:820px}
+  .kicker{font-size:.8rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem}
+  h1{font-family:var(--serif);font-size:clamp(3rem,9vw,5.6rem);font-weight:500;letter-spacing:.03em;line-height:1.05}
+  .hero-sub{font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,3vw,1.6rem);color:var(--muted);margin:1.3rem 0 2.4rem}
+  .hero-photo{width:min(340px,72vw);margin:0 auto 2.2rem;border:1px solid var(--line);border-radius:2px;padding:10px;background:var(--bg-soft);box-shadow:0 30px 60px rgba(0,0,0,.55)}
+  .hero-photo img{border-radius:1px}
+  .btn{display:inline-block;padding:.85rem 2.4rem;border:1px solid var(--gold);color:var(--gold-soft);font-size:.8rem;letter-spacing:.25em;text-transform:uppercase;transition:all .3s;border-radius:2px}
+  .btn:hover{background:var(--gold);color:#151005}
+  .btn.solid{background:var(--gold);color:#151005;margin-left:.8rem}
+  .btn.solid:hover{background:var(--gold-soft);border-color:var(--gold-soft)}
+  @media(max-width:520px){.btn.solid{margin-left:0;margin-top:.8rem}}
+
+  /* ---------- Sections ---------- */
+  section{padding:5.5rem 1.5rem;scroll-margin-top:60px}
+  .wrap{max-width:1100px;margin:0 auto}
+  .section-label{font-size:.75rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);text-align:center}
+  h2{font-family:var(--serif);font-size:clamp(2rem,5vw,3rem);font-weight:500;text-align:center;margin:.6rem 0 .8rem}
+  .rule{width:64px;height:1px;background:var(--gold);margin:0 auto 3rem;opacity:.7}
+  .alt{background:var(--bg-soft)}
+
+  /* ---------- About ---------- */
+  .about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.2rem}
+  @media(max-width:860px){.about-grid{grid-template-columns:1fr;max-width:620px;margin:0 auto}}
+  .about-card{background:var(--bg-card);border:1px solid var(--line);border-radius:3px;padding:2.2rem 1.9rem}
+  .about-card h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:1.5rem;color:var(--gold-soft);margin-bottom:1rem}
+  .about-card p{color:var(--muted);font-size:.95rem}
+  blockquote{font-family:var(--serif);font-style:italic;font-size:1.35rem;color:var(--cream);text-align:center;max-width:720px;margin:3.2rem auto 0;line-height:1.5}
+  blockquote footer{font-family:var(--sans);font-style:normal;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-top:1rem}
+
+  /* ---------- Listen ---------- */
+  .video-frame{max-width:760px;margin:0 auto;border:1px solid var(--line);padding:10px;background:var(--bg-card);border-radius:3px}
+  .video-frame .ratio{position:relative;padding-top:56.25%}
+  .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ---------- Songs ---------- */
+  .songs-intro{text-align:center;color:var(--muted);max-width:640px;margin:-1.6rem auto 2.6rem;font-size:.95rem}
+  .song-columns{columns:3;column-gap:2.5rem;max-width:960px;margin:0 auto}
+  @media(max-width:860px){.song-columns{columns:2}}
+  @media(max-width:560px){.song-columns{columns:1}}
+  .song-columns li{list-style:none;font-family:var(--serif);font-size:1.06rem;color:var(--cream);padding:.28rem 0;border-bottom:1px dotted rgba(201,162,39,.15);break-inside:avoid}
+  .song-columns li::before{content:"♪";color:var(--gold);margin-right:.55rem;font-size:.8rem}
+
+  /* ---------- Artwork ---------- */
+  .art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+  @media(max-width:900px){.art-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.art-grid{grid-template-columns:1fr;max-width:480px;margin:0 auto}}
+  .art-card{background:var(--bg-card);border:1px solid var(--line);border-radius:3px;overflow:hidden;display:flex;flex-direction:column}
+  .art-thumb{height:150px;display:flex;align-items:center;justify-content:center;background:
+    linear-gradient(135deg,rgba(201,162,39,.12),rgba(201,162,39,.02)),var(--bg-soft);
+    border-bottom:1px solid var(--line);font-family:var(--serif);font-style:italic;color:var(--gold);font-size:2.4rem}
+  .art-body{padding:1.5rem 1.5rem 1.7rem}
+  .art-body h3{font-family:var(--serif);font-size:1.4rem;font-weight:600;color:var(--cream)}
+  .art-meta{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:.35rem 0 .8rem}
+  .art-body p{color:var(--muted);font-size:.9rem}
+
+  /* ---------- Reviews ---------- */
+  .review-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
+  @media(max-width:820px){.review-grid{grid-template-columns:1fr;max-width:620px;margin:0 auto}}
+  .review-card{background:var(--bg-card);border:1px solid var(--line);border-radius:3px;padding:2rem;display:flex;flex-direction:column}
+  .stars{color:var(--gold);letter-spacing:.25em;margin-bottom:1rem;font-size:.9rem}
+  .review-card p{font-family:var(--serif);font-size:1.15rem;font-style:italic;color:var(--cream);flex:1}
+  .review-card cite{display:block;margin-top:1.3rem;font-style:normal;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-soft)}
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:3rem}
+  @media(max-width:760px){.gallery{grid-template-columns:repeat(2,1fr)}}
+  .gallery figure{border:1px solid var(--line);padding:6px;background:var(--bg-card);border-radius:2px}
+  .gallery img{width:100%;height:210px;object-fit:cover;object-position:top;border-radius:1px;filter:saturate(.92)}
+  .gallery figcaption{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:center;padding:.55rem 0 .25rem}
+
+  /* ---------- Contact ---------- */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;max-width:920px;margin:0 auto}
+  @media(max-width:820px){.contact-grid{grid-template-columns:1fr}}
+  .contact-copy h3{font-family:var(--serif);font-size:1.7rem;font-weight:500;color:var(--gold-soft);margin-bottom:1rem}
+  .contact-copy p{color:var(--muted)}
+  form{display:flex;flex-direction:column;gap:1rem}
+  input,textarea{background:var(--bg-card);border:1px solid var(--line);border-radius:3px;padding:.85rem 1rem;color:var(--cream);font-family:var(--sans);font-size:.92rem}
+  input:focus,textarea:focus{outline:none;border-color:var(--gold)}
+  textarea{min-height:130px;resize:vertical}
+  form .btn{align-self:flex-start;cursor:pointer;background:none}
+  form .btn:hover{background:var(--gold)}
+  .form-note{font-size:.75rem;color:var(--muted)}
+
+  footer.site{border-top:1px solid var(--line);padding:2.4rem 1.5rem;text-align:center;color:var(--muted);font-size:.78rem;letter-spacing:.08em}
+  footer.site .fbrand{font-family:var(--serif);font-size:1.2rem;color:var(--cream);margin-bottom:.4rem}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="brand">Jack <span>Petrotto</span></div>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <ul class="nav-links" id="navlinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#listen">Listen</a></li>
+      <li><a href="#songs">Songs</a></li>
+      <li><a href="#artwork">Artwork</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="kicker">Vocalist · Buffalo, New York</p>
+    <div class="hero-photo">
+      <img src="https://img1.wsimg.com/isteam/ip/d12e2440-1116-4ddd-8784-802bfa9e10c7/blob-0009.png" alt="Jack Petrotto in concert" onerror="this.closest('.hero-photo').style.display='none'">
+    </div>
+    <h1>Jack Petrotto</h1>
+    <p class="hero-sub">The Great American Songbook — restyled, revived, and sung from the heart.</p>
+    <a class="btn" href="#contact">Book a Performance</a><a class="btn solid" href="https://youtu.be/87FPzJXaY4E" target="_blank" rel="noopener">Listen Now</a>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <p class="section-label">About Jack</p>
+    <h2>A Voice for the Standards</h2>
+    <div class="rule"></div>
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>“You Will Be My Music”</h3>
+        <p>A Buffalo native, Jack Petrotto has become a regional favorite by restyling songs from our Great American Songbook — elevating these classics with refined, thoughtful phrasing. From his first performances at local coffee shops and private events, Jack has been breathing new life into treasures like “The Shadow of Your Smile,” “Body and Soul,” and “Imagination,” setting a higher standard with every year.</p>
+      </div>
+      <div class="about-card">
+        <h3>“I've Got the World on a String”</h3>
+        <p>While the Songbook is home, Jack connects just as personally with contemporary material, delivering every lyric with genuine commitment. His versatility surprises audiences in the best way — you might hear “Blue Moon” arranged as a country tune rather than the familiar 1934 Rodgers &amp; Hart version, and love it all the more for it.</p>
+      </div>
+      <div class="about-card">
+        <h3>“The Best Is Yet to Come”</h3>
+        <p>Jack's family traces its roots to Campobello, Sicily — and his voice carries that heritage proudly. His interpretive gifts add one more Italian-American singer to a long, celebrated tradition of excellence in music and art.</p>
+      </div>
+    </div>
+    <blockquote>
+      “It's a known fact that Italian Americans have made good pop singers… Italians have it in their genes to excel in music and art.”
+      <footer>— Tony Bennett</footer>
+    </blockquote>
+  </div>
+</section>
+
+<section id="listen" class="alt">
+  <div class="wrap">
+    <p class="section-label">Listen</p>
+    <h2>Hear Jack Sing</h2>
+    <div class="rule"></div>
+    <div class="video-frame">
+      <div class="ratio">
+        <iframe src="https://www.youtube.com/embed/87FPzJXaY4E" title="Jack Petrotto — performance" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="songs">
+  <div class="wrap">
+    <p class="section-label">Repertoire</p>
+    <h2>Songs in Jack's Collection</h2>
+    <div class="rule"></div>
+    <p class="songs-intro">Some of the more popular songs in Jack's collection — over a hundred standards, torch songs, and swing classics, with new arrangements added all the time.</p>
+    <ul class="song-columns">
+      <li>A Fine Romance</li>
+      <li>Ain't That a Kick in the Head?</li>
+      <li>All My Tomorrows</li>
+      <li>All of Me</li>
+      <li>All or Nothing at All</li>
+      <li>All the Way</li>
+      <li>At Long Last Love</li>
+      <li>Ave Maria</li>
+      <li>Bésame Mucho</li>
+      <li>Bewitched, Bothered &amp; Bewildered</li>
+      <li>Blue Moon</li>
+      <li>Body &amp; Soul</li>
+      <li>Call Me Irresponsible</li>
+      <li>Chicago</li>
+      <li>Close to You</li>
+      <li>Cold, Cold Heart</li>
+      <li>Come Fly with Me</li>
+      <li>Daybreak</li>
+      <li>Didn't We</li>
+      <li>Don't Get Around Much Anymore</li>
+      <li>Don't Worry 'Bout Me</li>
+      <li>Drinkin' Again</li>
+      <li>East of the Sun &amp; West of the Moon</li>
+      <li>Embraceable You</li>
+      <li>Feeling Good</li>
+      <li>Fly Me to the Moon</li>
+      <li>A Foggy Day in London Town</li>
+      <li>For Once in My Life</li>
+      <li>Hey Look, No Crying</li>
+      <li>High Hopes</li>
+      <li>Home</li>
+      <li>How About You?</li>
+      <li>How Do You Keep the Music Playing?</li>
+      <li>I Get a Kick Out of You</li>
+      <li>I Guess I'll Have to Change My Plan</li>
+      <li>I Left My Heart in San Francisco</li>
+      <li>I Love a Piano</li>
+      <li>I Love My Wife</li>
+      <li>I Loved Her</li>
+      <li>I Wanna Be Around</li>
+      <li>I Won't Dance</li>
+      <li>If I Ruled the World</li>
+      <li>I'll Be Seeing You</li>
+      <li>Imagination</li>
+      <li>Innamorata</li>
+      <li>It Amazes Me</li>
+      <li>It Had to Be You</li>
+      <li>It Happened in Monterey</li>
+      <li>It Only Happens When I Dance with You</li>
+      <li>It's Always You</li>
+      <li>It's Impossible</li>
+      <li>It's Like Reaching for the Moon</li>
+      <li>I've Got the World on a String</li>
+      <li>I've Got You Under My Skin</li>
+      <li>Just in Time</li>
+      <li>Learnin' the Blues</li>
+      <li>Let Me Try Again</li>
+      <li>Like Someone in Love</li>
+      <li>L.O.V.E.</li>
+      <li>Love &amp; Marriage</li>
+      <li>Luck Be a Lady</li>
+      <li>Maybe This Time</li>
+      <li>My Confession</li>
+      <li>My Funny Valentine</li>
+      <li>My Kind of Town</li>
+      <li>My Special Angel</li>
+      <li>My Way</li>
+      <li>Nancy with the Laughing Face</li>
+      <li>Nevertheless</li>
+      <li>New York, New York</li>
+      <li>Nice 'n' Easy</li>
+      <li>Night &amp; Day</li>
+      <li>Nothing but the Best</li>
+      <li>Pennies from Heaven</li>
+      <li>Please Be Kind</li>
+      <li>Polka Dots &amp; Moonbeams</li>
+      <li>Prisoner of Love</li>
+      <li>Pure Imagination</li>
+      <li>Put Your Dreams Away</li>
+      <li>Put Your Head on My Shoulder</li>
+      <li>Same Old Saturday Night</li>
+      <li>Save the Last Dance for Me</li>
+      <li>She's Funny That Way</li>
+      <li>Sleep Warm</li>
+      <li>Smile</li>
+      <li>Somewhere Over the Rainbow</li>
+      <li>Steppin' Out with My Baby</li>
+      <li>Strangers in the Night</li>
+      <li>Sway</li>
+      <li>Swinging on a Star</li>
+      <li>Take Me</li>
+      <li>Taking a Chance on Love</li>
+      <li>That Old Feeling</li>
+      <li>That's Amore</li>
+      <li>The Best Is Yet to Come</li>
+      <li>The Boulevard of Broken Dreams</li>
+      <li>The Girl from Ipanema</li>
+      <li>The Good Life</li>
+      <li>The Lady Is a Tramp</li>
+      <li>The Last Dance</li>
+      <li>The More I See You</li>
+      <li>The One I Love Belongs to Somebody Else</li>
+      <li>The Shadow of Your Smile</li>
+      <li>The Summer Wind</li>
+      <li>The Tender Trap</li>
+      <li>The Very Thought of You</li>
+      <li>The Way You Look Tonight</li>
+      <li>There Are Such Things</li>
+      <li>They All Laughed</li>
+      <li>They Can't Take That Away from Me</li>
+      <li>This Is All I Ask</li>
+      <li>'Til There Was You</li>
+      <li>Too Marvelous for Words</li>
+      <li>Top Hat, White Tie &amp; Tails</li>
+      <li>Try a Little Tenderness</li>
+      <li>Turn Around, Look at Me</li>
+      <li>Watch What Happens</li>
+      <li>When Do the Bells Ring for Me?</li>
+      <li>When I Fall in Love</li>
+      <li>When Love Was All We Had</li>
+      <li>When You're Smiling</li>
+      <li>Where or When</li>
+      <li>Witchcraft</li>
+      <li>You Don't Know Me</li>
+      <li>You Make Me Feel So Young</li>
+      <li>You Will Be My Music</li>
+      <li>Young at Heart</li>
+      <li>You're Nobody till Somebody Loves You</li>
+      <li>Your Love Amazes Me</li>
+    </ul>
+  </div>
+</section>
+
+<section id="artwork" class="alt">
+  <div class="wrap">
+    <p class="section-label">The Artist's Hand</p>
+    <h2>Artwork by Jack Petrotto</h2>
+    <div class="rule"></div>
+    <div class="art-grid">
+      <div class="art-card"><div class="art-thumb">✦</div><div class="art-body">
+        <h3>Resurrection</h3><p class="art-meta">Acrylic on canvas · 36" × 42"</p>
+        <p>Humanity struggles upward from despair while a divine messenger, lantern in hand, lights the path from above.</p>
+      </div></div>
+      <div class="art-card"><div class="art-thumb">✦</div><div class="art-body">
+        <h3>One Man Concert</h3><p class="art-meta">Etched zinc plate print · 13" × 9"</p>
+        <p>A seated guitarist lost in the joy of performance.</p>
+      </div></div>
+      <div class="art-card"><div class="art-thumb">✦</div><div class="art-body">
+        <h3>San Antonio River</h3><p class="art-meta">Acrylic on canvas · 36" × 26"</p>
+        <p>The vibrant nightlife along the San Antonio River Walk, alive with color and motion.</p>
+      </div></div>
+      <div class="art-card"><div class="art-thumb">✦</div><div class="art-body">
+        <h3>Old Wizard</h3><p class="art-meta">Zinc plate etching · 2" × 2"</p>
+        <p>A wizard captured mid-incantation, in miniature.</p>
+      </div></div>
+      <div class="art-card"><div class="art-thumb">✦</div><div class="art-body">
+        <h3>The Last Supper</h3><p class="art-meta">Acrylic on plaster · 96" × 60"</p>
+        <p>A commissioned dining-room work featuring Lebanese bread — and Judas wearing a sneer, at the collector's request.</p>
+      </div></div>
+      <div class="art-card"><div class="art-thumb">✦</div><div class="art-body">
+        <h3>Delaware Park</h3><p class="art-meta">Watercolor · 33" × 26"</p>
+        <p>A young boy watches an RC boat event — or perhaps he's just daydreaming.</p>
+      </div></div>
+      <div class="art-card"><div class="art-thumb">✦</div><div class="art-body">
+        <h3>Art Reproduction</h3><p class="art-meta">Acrylic on canvas · 12" × 16"</p>
+        <p>An interpretation of the burning of the USS Philadelphia in Tripoli Harbor, 1804.</p>
+      </div></div>
+      <div class="art-card"><div class="art-thumb">✦</div><div class="art-body">
+        <h3>A Lamp and a Bell</h3><p class="art-meta">Acrylic on canvas · 28" × 28"</p>
+        <p>A still life from 1973 college coursework, an early study in realism.</p>
+      </div></div>
+      <div class="art-card"><div class="art-thumb">✦</div><div class="art-body">
+        <h3>A Violin and Music</h3><p class="art-meta">Acrylic on canvas · 16" × 12"</p>
+        <p>A warm-toned still life of a violin resting with its sheet music.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <p class="section-label">Reviews</p>
+    <h2>What Audiences Are Saying</h2>
+    <div class="rule"></div>
+    <div class="review-grid">
+      <div class="review-card"><div class="stars">★★★★★</div>
+        <p>“Political campaigning often brings pleasant discoveries and having you as our entertainment at our fundraiser was super! We are pleased to be able to recommend you to all persons interested in engaging you to sing.”</p>
+        <cite>Assemblyman David Seaman — Lockport, NY</cite>
+      </div>
+      <div class="review-card"><div class="stars">★★★★★</div>
+        <p>“I heard many positive comments from people, and the owner said you were phenomenal… perfect for the sort of environment we would like to have at our restaurant.”</p>
+        <cite>Dawn — Williamsville, NY</cite>
+      </div>
+      <div class="review-card"><div class="stars">★★★★★</div>
+        <p>“Thank you very much for entertaining at the Amherst Center for Senior Services… The seniors truly enjoyed your music, and you were terrific entertainment.”</p>
+        <cite>Cathy — Amherst, NY</cite>
+      </div>
+      <div class="review-card"><div class="stars">★★★★★</div>
+        <p>“Everyone loved your voice, and we all agreed that this was the best party ever… the only people who were disappointed were the ones who couldn't come.”</p>
+        <cite>Roy &amp; Christina — Clarence, NY</cite>
+      </div>
+      <div class="review-card"><div class="stars">★★★★★</div>
+        <p>“Thanks for a wonderful performance… The charm of your voice, and those oldies took most of us back to those good old days.”</p>
+        <cite>Joan P. — Tonawanda, NY</cite>
+      </div>
+    </div>
+    <div class="gallery">
+      <figure><img src="https://img1.wsimg.com/isteam/ip/d12e2440-1116-4ddd-8784-802bfa9e10c7/image2.jpeg" alt="Jack Petrotto performing" loading="lazy" onerror="this.closest('figure').style.display='none'"><figcaption>In Performance</figcaption></figure>
+      <figure><img src="https://img1.wsimg.com/isteam/ip/d12e2440-1116-4ddd-8784-802bfa9e10c7/image15.jpeg" alt="Jack Petrotto singing to an audience" loading="lazy" onerror="this.closest('figure').style.display='none'"><figcaption>Singing to the Crowd</figcaption></figure>
+      <figure><img src="https://img1.wsimg.com/isteam/ip/d12e2440-1116-4ddd-8784-802bfa9e10c7/image8.jpeg" alt="Black and white photo of Jack Petrotto performing" loading="lazy" onerror="this.closest('figure').style.display='none'"><figcaption>On Stage</figcaption></figure>
+      <figure><img src="https://img1.wsimg.com/isteam/ip/d12e2440-1116-4ddd-8784-802bfa9e10c7/image7.jpeg" alt="Jack Petrotto promotional photo in black suit" loading="lazy" onerror="this.closest('figure').style.display='none'"><figcaption>Promotional Photo</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="alt">
+  <div class="wrap">
+    <p class="section-label">Contact</p>
+    <h2>Book Jack Petrotto</h2>
+    <div class="rule"></div>
+    <div class="contact-grid">
+      <div class="contact-copy">
+        <h3>Let's make magic happen.</h3>
+        <p>Do you have questions, want to book a performance, or collaborate on a new piece? Reach out — weddings, private parties, restaurants, fundraisers, and senior centers across Western New York.</p>
+        <p style="margin-top:1.2rem"><a class="btn" href="https://youtu.be/87FPzJXaY4E" target="_blank" rel="noopener">Watch a Performance</a></p>
+      </div>
+      <!-- FORM SETUP: replace YOUR-EMAIL@EXAMPLE.COM below with Jack's real booking email.
+           The form uses formsubmit.co (free, no signup) — the first submission sends a
+           confirmation email to that address; click it once and the form works forever. -->
+      <form action="https://formsubmit.co/YOUR-EMAIL@EXAMPLE.COM" method="POST">
+        <input type="hidden" name="_subject" value="Booking inquiry from jackpetrotto.com">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email *" required>
+        <textarea name="message" placeholder="Tell Jack about your event…" required></textarea>
+        <button class="btn" type="submit">Send Message</button>
+        <p class="form-note">Your message goes straight to Jack. He'll get back to you soon.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="fbrand">Jack Petrotto</div>
+  <div>Vocalist · Buffalo, New York</div>
+  <div style="margin-top:.8rem">© <span id="yr">2026</span> Jack Petrotto — All Rights Reserved</div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  // close mobile menu after tapping a link
+  document.querySelectorAll('.nav-links a').forEach(a =>
+    a.addEventListener('click', () => document.getElementById('navlinks').classList.remove('open')));
+</script>
+
+</body>
+</html>
